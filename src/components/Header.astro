@@ -1,0 +1,28 @@
+---
+const navItems = [
+  { name: 'Home', url: '/' },
+  { name: 'Fine Art', url: '/fine-art' },
+  { name: 'Dining', url: '/dining' },
+  { name: 'Properties', url: '/properties' },
+  { name: 'Lifestyle', url: '/lifestyle' },
+  { name: 'Guides', url: '/guides' },
+  { name: 'Glossary', url: '/glossary' },
+];
+---
+
+<header class="bg-white shadow-md">
+  <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+    <a href="https://dubise.com" class="text-3xl font-serif font-bold text-dubise-grey">Dubise</a>
+    <nav>
+      <ul class="flex space-x-6">
+        {navItems.map((item) => (
+          <li>
+            <a href={item.url} class="text-dubise-black hover:text-dubise-gold transition-colors duration-200">
+              {item.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const glossaryItems = [
+  { term: 'Burj Khalifa', definition: 'The world\'s tallest building, located in Dubai.' },
+  { term: 'Palm Jumeirah', definition: 'An artificial archipelago in Dubai, known for its palm tree shape.' },
+  { term: 'Dubai Marina', definition: 'An artificial canal city, built along a 3 km stretch of Persian Gulf shoreline.' },
+  { term: 'Sheikh Zayed Road', definition: 'The main artery of Dubai, lined with impressive skyscrapers.' },
+  { term: 'Dubai Mall', definition: 'One of the world\'s largest shopping malls, located in Downtown Dubai.' },
+];
+
+const crumbs = [
+  { title: 'Glossary', href: '/glossary' }
+];
+---
+
+<Layout title="Luxury Living Glossary - Dubise">
+  <Breadcrumbs crumbs={crumbs} />
+  <h1 class="text-4xl font-serif mb-8">Luxury Living Glossary</h1>
+  <p class="text-xl mb-12">Explore our curated glossary of luxury living terms and iconic Dubai landmarks.</p>
+
+  <div class="space-y-8">
+    {glossaryItems.map((item) => (
+      <div class="bg-white shadow-lg rounded-lg p-6">
+        <h2 class="text-2xl font-serif mb-2">{item.term}</h2>
+        <p class="text-gray-600">{item.definition}</p>
+      </div>
+    ))}
+  </div>
+</Layout>
