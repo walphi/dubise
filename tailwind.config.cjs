@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'dubise-gold': '#D4AF37',
+        'dubise-green': '#3C5843',
         'dubise-black': '#1A1A1A',
       },
       fontFamily: {
