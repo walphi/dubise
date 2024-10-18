@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const crumbs = [
+  { title: 'Fine Art', href: '/fine-art' },
+  { title: 'Contemporary Art in Dubai', href: '/fine-art/contemporary-art-dubai' }
+];
+---
+
+<Layout title="The Rise of Contemporary Art in Dubai - Dubise">
+  <Breadcrumbs crumbs={crumbs} />
+  <article class="max-w-4xl mx-auto mt-8">
+    <h1 class="text-3xl font-serif mb-6">The Rise of Contemporary Art in Dubai</h1>
+    <img src="/images/contemporary-art-dubai.jpg" alt="Contemporary Art in Dubai" class="w-full h-64 object-cover mb-6 rounded-lg">
+    <div class="prose lg:prose-xl">
+      <p>Dubai's contemporary art scene has experienced a meteoric rise in recent years, transforming the city into a global art hub. This article explores the factors contributing to this artistic renaissance and highlights key players in the Dubai art world.</p>
+      
+      <h2>Key Factors in Dubai's Art Scene Growth</h2>
+      <ul>
+        <li>Establishment of the Dubai Design District (d3)</li>
+        <li>Annual Art Dubai fair</li>
+        <li>Government support for cultural initiatives</li>
+        <li>Influx of international galleries</li>
+      </ul>
+
+      <p>The Dubai art scene offers a unique blend of Middle Eastern and international influences, creating a dynamic and diverse artistic landscape. From emerging local talents to established global artists, Dubai provides a platform for a wide range of contemporary art expressions.</p>
+
+      <h2>Must-Visit Contemporary Art Spaces</h2>
+      <ul>
+        <li><a href="/fine-art/alserkal-avenue">Alserkal Avenue</a></li>
+        <li><a href="/fine-art/jameel-arts-centre">Jameel Arts Centre</a></li>
+        <li><a href="/fine-art/dubai-design-district">Dubai Design District (d3)</a></li>
+      </ul>
+
+      <p>For art enthusiasts looking to explore Dubai's contemporary art scene further, consider checking out our <a href="/guides/dubai-art-scene">comprehensive guide to Dubai's art scene</a> or joining one of our <a href="/fine-art/art-tours">curated art tours</a>.</p>
+    </div>
+  </article>
+</Layout>

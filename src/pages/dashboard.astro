@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const crumbs = [
+  { title: 'Dashboard', href: '/dashboard' }
+];
+
+// This is a placeholder for user data. In a real application, this would be fetched from a database or API.
+const user = {
+  name: 'John Doe',
+  email: 'john@example.com',
+  subscriptionStatus: 'Active',
+  subscriptionExpiry: '2023-12-31'
+};
+
+const guides = [
+  { title: 'Ultimate Dubai Dining Guide', url: '/guides/ultimate-dubai-dining' },
+  { title: 'Luxury Property Investment in Dubai', url: '/guides/luxury-property-investment' },
+  { title: 'Dubai\'s Hidden Art Scene', url: '/guides/dubai-hidden-art-scene' },
+];
+---
+
+<Layout title="User Dashboard - Dubise">
+  <Breadcrumbs crumbs={crumbs} />
+  <div class="max-w-4xl mx-auto mt-8">
+    <h1 class="text-3xl font-serif mb-6">Welcome, {user.name}</h1>
+    
+    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <h2 class="text-2xl font-serif mb-4">Your Account</h2>
+      <p><strong>Email:</strong> {user.email}</p>
+      <p><strong>Subscription Status:</strong> {user.subscriptionStatus}</p>
+      <p><strong>Subscription Expiry:</strong> {user.subscriptionExpiry}</p>
+    </div>
+
+    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <h2 class="text-2xl font-serif mb-4">Your Guides</h2>
+      <ul class="list-disc pl-5">
+        {guides.map((guide) => (
+          <li class="mb-2">
+            <a href={guide.url} class="text-dubise-green hover:underline">{guide.title}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <h2 class="text-2xl font-serif mb-4">Account Actions</h2>
+      <div class="flex space-x-4">
+        <a href="/change-password" class="bg-dubise-green hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          Change Password
+        </a>
+        <a href="/update-profile" class="bg-dubise-green hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          Update Profile
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,38 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const crumbs = [
+  { title: 'Dining', href: '/dining' },
+  { title: 'Michelin-Starred Restaurants', href: '/dining/michelin-starred-restaurants' }
+];
+---
+
+<Layout title="Dubai's Michelin-Starred Restaurants - Dubise">
+  <Breadcrumbs crumbs={crumbs} />
+  <article class="max-w-4xl mx-auto mt-8">
+    <h1 class="text-3xl font-serif mb-6">Dubai's Michelin-Starred Restaurants</h1>
+    <img src="/images/michelin-restaurants-dubai.jpg" alt="Michelin-Starred Restaurant in Dubai" class="w-full h-64 object-cover mb-6 rounded-lg">
+    <div class="prose lg:prose-xl">
+      <p>Dubai's culinary scene has reached new heights with the introduction of the Michelin Guide to the city. This article explores the crème de la crème of Dubai's dining establishments, showcasing the restaurants that have earned the coveted Michelin stars.</p>
+      
+      <h2>Top Michelin-Starred Restaurants in Dubai</h2>
+      <ul>
+        <li>Stay by Yannick Alléno (Two Michelin Stars)</li>
+        <li>Il Ristorante - Niko Romito (Two Michelin Stars)</li>
+        <li>Tresind Studio (One Michelin Star)</li>
+        <li>Ossiano (One Michelin Star)</li>
+      </ul>
+
+      <p>Each of these restaurants offers a unique culinary experience, blending innovative techniques with the finest ingredients to create unforgettable dining moments.</p>
+
+      <h2>Making Reservations</h2>
+      <p>Due to high demand, it's recommended to make reservations well in advance for these prestigious establishments. Many offer online booking systems or concierge services to assist with your reservation.</p>
+
+      <p>For a more comprehensive look at Dubai's fine dining scene, including hidden gems and local favorites, check out our <a href="/guides/ultimate-dubai-dining">Ultimate Dubai Dining Guide</a>.</p>
+
+      <h2>Beyond Michelin</h2>
+      <p>While Michelin-starred restaurants represent the pinnacle of fine dining, Dubai's culinary landscape offers much more. Explore our articles on <a href="/dining/local-eateries">Dubai's Best Local Eateries</a> and <a href="/dining/rooftop-restaurants">Luxury Dining with a View</a> to discover the full spectrum of Dubai's gastronomic delights.</p>
+    </div>
+  </article>
+</Layout>

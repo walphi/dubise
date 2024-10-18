@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const featuredProperties = [
+  {
+    title: 'Luxurious Villa in Palm Jumeirah',
+    image: '/images/palm-jumeirah.jpg',
+    price: '$15,000,000',
+    bedrooms: 6,
+    bathrooms: 7,
+    area: '10,000 sq ft',
+    url: '/properties/luxurious-villa-palm-jumeirah',
+  },
+  {
+    title: 'Penthouse in Dubai Marina',
+    image: '/images/dubai-marina.jpg',
+    price: '$8,500,000',
+    bedrooms: 4,
+    bathrooms: 5,
+    area: '6,500 sq ft',
+    url: '/properties/penthouse-dubai-marina',
+  },
+  {
+    title: 'Modern Villa in Emirates Hills',
+    image: '/images/emirates-hills.jpg',
+    price: '$12,000,000',
+    bedrooms: 5,
+    bathrooms: 6,
+    area: '9,000 sq ft',
+    url: '/properties/modern-villa-emirates-hills',
+  },
+];
+
+const crumbs = [
+  { title: 'Properties', href: '/properties' }
+];
+---
+
+<Layout title="Luxury Properties - Dubise">
+  <Breadcrumbs crumbs={crumbs} />
+  <h1 class="text-3xl md:text-4xl font-serif mb-8">Luxury Properties in Dubai</h1>
+  <p class="text-lg md:text-xl mb-12">Discover the most exclusive and sought-after properties in Dubai's prime locations.</p>
+
+  <section class="featured-properties">
+    <h2 class="text-2xl md:text-3xl font-serif mb-6">Featured Properties</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {featuredProperties.map((property) => (
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src={property.image} alt={property.title} class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-serif mb-2">{property.title}</h3>
+            <p class="text-dubise-gold text-xl mb-4">{property.price}</p>
+            <div class="flex flex-wrap justify-between text-gray-600 mb-4">
+              <span class="w-full sm:w-auto mb-2 sm:mb-0">{property.bedrooms} Bedrooms</span>
+              <span class="w-full sm:w-auto mb-2 sm:mb-0">{property.bathrooms} Bathrooms</span>
+              <span class="w-full sm:w-auto">{property.area}</span>
+            </div>
+            <a href={property.url} class="block w-full text-center bg-dubise-black text-white py-2 rounded hover:bg-opacity-80 transition-colors duration-200">
+              View Property
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="property-search mt-16">
+    <h2 class="text-2xl md:text-3xl font-serif mb-6">Find Your Dream Property</h2>
+    <form class="bg-white shadow-lg rounded-lg p-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+          <label for="location" class="block mb-2">Location</label>
+          <select id="location" name="location" class="w-full p-2 border rounded">
+            <option value="">Select Location</option>
+            <option value="palm-jumeirah">Palm Jumeirah</option>
+            <option value="dubai-marina">Dubai Marina</option>
+            <option value="emirates-hills">Emirates Hills</option>
+          </select>
+        </div>
+        <div>
+          <label for="property-type" class="block mb-2">Property Type</label>
+          <select id="property-type" name="property-type" class="w-full p-2 border rounded">
+            <option value="">Select Type</option>
+            <option value="villa">Villa</option>
+            <option value="apartment">Apartment</option>
+            <option value="penthouse">Penthouse</option>
+          </select>
+        </div>
+        <div>
+          <label for="price-range" class="block mb-2">Price Range</label>
+          <select id="price-range" name="price-range" class="w-full p-2 border rounded">
+            <option value="">Select Range</option>
+            <option value="1-5m">$1M - $5M</option>
+            <option value="5-10m">$5M - $10M</option>
+            <option value="10m+">$10M+</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="mt-4 w-full bg-dubise-gold text-white py-2 rounded hover:bg-opacity-80 transition-colors duration-200">
+        Search Properties
+      </button>
+    </form>
+  </section>
+</Layout>

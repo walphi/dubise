@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const query = Astro.url.searchParams.get('q') || '';
+
+// This is a placeholder for actual search functionality
+const searchResults = [
+  { title: 'Luxury Villa in Palm Jumeirah', url: '/properties/luxury-villa-palm-jumeirah' },
+  { title: 'Fine Dining Experience at Burj Al Arab', url: '/dining/burj-al-arab' },
+  { title: 'Dubai Art Scene: A Comprehensive Guide', url: '/guides/dubai-art-scene' },
+];
+
+const crumbs = [
+  { title: 'Search Results', href: '/search' }
+];
+---
+
+<Layout title={`Search Results for "${query}" - Dubise`}>
+  <Breadcrumbs crumbs={crumbs} />
+  <h1 class="text-3xl md:text-4xl font-serif mb-8">Search Results for "{query}"</h1>
+  
+  {searchResults.length > 0 ? (
+    <ul class="space-y-4">
+      {searchResults.map((result) => (
+        <li class="bg-white shadow-md rounded-lg p-4">
+          <a href={result.url} class="text-xl font-serif text-dubise-green hover:underline">
+            {result.title}
+          </a>
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p class="text-xl">No results found for "{query}". Please try a different search term.</p>
+  )}
+</Layout>

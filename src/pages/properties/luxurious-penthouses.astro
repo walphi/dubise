@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const crumbs = [
+  { title: 'Properties', href: '/properties' },
+  { title: 'Luxurious Penthouses', href: '/properties/luxurious-penthouses' }
+];
+---
+
+<Layout title="Dubai's Most Luxurious Penthouses - Dubise">
+  <Breadcrumbs crumbs={crumbs} />
+  <article class="max-w-4xl mx-auto mt-8">
+    <h1 class="text-3xl font-serif mb-6">Dubai's Most Luxurious Penthouses</h1>
+    <img src="/images/dubai-penthouses.jpg" alt="Luxurious Penthouse in Dubai" class="w-full h-64 object-cover mb-6 rounded-lg">
+    <div class="prose lg:prose-xl">
+      <p>Dubai's skyline is adorned with some of the world's most opulent penthouses, offering unparalleled luxury and breathtaking views. This article takes you on a tour of the city's most exclusive sky-high residences.</p>
+      
+      <h2>Top Luxury Penthouses in Dubai</h2>
+      <ul>
+        <li>One Palm Jumeirah Penthouse</li>
+        <li>Burj Khalifa Penthouse</li>
+        <li>Atlantis The Royal Residences Penthouse</li>
+        <li>Address Residences Jumeirah Resort Penthouse</li>
+      </ul>
+
+      <p>These penthouses represent the pinnacle of luxury living in Dubai, featuring state-of-the-art amenities, stunning interiors, and panoramic views of the city and the Arabian Gulf.</p>
+
+      <h2>Features of Dubai's Luxury Penthouses</h2>
+      <ul>
+        <li>Private elevators and lobbies</li>
+        <li>Expansive terraces and infinity pools</li>
+        <li>Smart home technology</li>
+        <li>Dedicated concierge services</li>
+        <li>World-class interior design</li>
+      </ul>
+
+      <p>For those interested in investing in Dubai's luxury property market, our <a href="/guides/luxury-property-investment">Luxury Property Investment Guide</a> provides valuable insights and expert advice.</p>
+
+      <h2>Beyond Penthouses</h2>
+      <p>While penthouses offer the ultimate in luxury living, Dubai's property market has much more to offer. Explore our articles on <a href="/properties/palm-jumeirah-living">Palm Jumeirah Living</a> and <a href="/properties/eco-friendly-residences">Sustainable Luxury Residences</a> to discover more options for high-end living in Dubai.</p>
+
+      <p>For a personalized tour of Dubai's most exclusive properties, including these penthouses, consider booking our <a href="/properties/vip-property-tour">VIP Property Tour</a> service.</p>
+    </div>
+  </article>
+</Layout>

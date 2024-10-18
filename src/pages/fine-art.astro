@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const artGalleries = [
+  {
+    name: 'Dubai Opera Gallery',
+    image: '/images/dubai-opera.jpg',
+    description: 'Experience world-class art exhibitions in the iconic Dubai Opera building.',
+    url: '/art-galleries/dubai-opera-gallery',
+  },
+  {
+    name: 'Alserkal Avenue',
+    image: '/images/al-fahidi-neighbourhood.jpg',
+    description: 'Explore contemporary art in Dubai\'s trendy cultural district.',
+    url: '/art-galleries/alserkal-avenue',
+  },
+  {
+    name: 'DIFC Art Nights',
+    image: '/images/difc-grand-mosque.jpg',
+    description: 'Discover a vibrant mix of art and finance in Dubai\'s business hub.',
+    url: '/art-galleries/difc-art-nights',
+  },
+];
+
+const crumbs = [
+  { title: 'Fine Art', href: '/fine-art' }
+];
+---
+
+<Layout title="Fine Art - Dubise">
+  <Breadcrumbs crumbs={crumbs} />
+  <h1 class="text-4xl font-serif mb-8">Fine Art in Dubai</h1>
+  <p class="text-xl mb-12">Immerse yourself in Dubai's thriving art scene, from contemporary galleries to traditional exhibitions.</p>
+
+  <section class="art-galleries">
+    <h2 class="text-3xl font-serif mb-6">Featured Art Destinations</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {artGalleries.map((gallery) => (
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src={gallery.image} alt={gallery.name} class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-serif mb-2">{gallery.name}</h3>
+            <p class="text-gray-600 mb-4">{gallery.description}</p>
+            <a href={gallery.url} class="text-dubise-gold hover:underline">Discover More</a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="upcoming-exhibitions mt-16">
+    <h2 class="text-3xl font-serif mb-6">Upcoming Exhibitions</h2>
+    <ul class="space-y-4">
+      <li class="bg-white shadow p-4 rounded">
+        <h3 class="text-xl font-serif">Emirati Expressions: Contemporary Art from the UAE</h3>
+        <p class="text-gray-600">Burj Khalifa Annex | September 1 - October 15, 2023</p>
+      </li>
+      <li class="bg-white shadow p-4 rounded">
+        <h3 class="text-xl font-serif">Dubai Design Week</h3>
+        <p class="text-gray-600">Dubai Design District | November 7 - 12, 2023</p>
+      </li>
+      <li class="bg-white shadow p-4 rounded">
+        <h3 class="text-xl font-serif">Art Dubai 2024</h3>
+        <p class="text-gray-600">Madinat Jumeirah | March 1 - 3, 2024</p>
+      </li>
+    </ul>
+  </section>
+</Layout>

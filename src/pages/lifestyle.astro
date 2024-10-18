@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const lifestyleCategories = [
+  {
+    title: 'Classic Cars',
+    image: '/images/al-fagaa.jpg',
+    description: 'Explore Dubai\'s thriving classic car scene and exclusive collections.',
+    url: '/lifestyle/classic-cars',
+  },
+  {
+    title: 'Fine Watches',
+    image: '/images/dubai-mall.jpg',
+    description: 'Discover the most coveted timepieces and luxury watch boutiques in Dubai.',
+    url: '/lifestyle/fine-watches',
+  },
+  {
+    title: 'Private Jets',
+    image: '/images/airport-terminal-1.jpg',
+    description: 'Experience the ultimate in luxury travel with Dubai\'s private jet services.',
+    url: '/lifestyle/private-jets',
+  },
+  {
+    title: 'Luxury Hotels',
+    image: '/images/burj-al-arab-jumeirah.jpg',
+    description: 'Indulge in the most opulent and exclusive hotels Dubai has to offer.',
+    url: '/lifestyle/luxury-hotels',
+  },
+];
+
+const crumbs = [
+  { title: 'Lifestyle', href: '/lifestyle' }
+];
+---
+
+<Layout title="Luxury Lifestyle - Dubise">
+  <Breadcrumbs crumbs={crumbs} />
+  <h1 class="text-4xl font-serif mb-8">Luxury Lifestyle in Dubai</h1>
+  <p class="text-xl mb-12">Immerse yourself in the epitome of luxury living with our curated lifestyle experiences.</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {lifestyleCategories.map((category) => (
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src={category.image} alt={category.title} class="w-full h-64 object-cover" />
+        <div class="p-6">
+          <h2 class="text-2xl font-serif mb-2">{category.title}</h2>
+          <p class="text-gray-600 mb-4">{category.description}</p>
+          <a href={category.url} class="text-dubise-gold hover:underline">Explore More</a>
+        </div>
+      </div>
+    ))}
+  </div>
+</Layout>

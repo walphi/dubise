@@ -1,0 +1,378 @@
+---
+const sections = [
+  {
+    title: 'Fine Art',
+    articles: [
+      {
+        title: 'The Rise of Contemporary Art in Dubai',
+        image: 'https://images.unsplash.com/photo-1533106958148-daaeab8b83fe?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        description: 'Explore the burgeoning contemporary art scene in Dubai.',
+        url: '/fine-art/contemporary-art-dubai'
+      },
+      {
+        title: 'Dubai\'s Most Exclusive Art Galleries',
+        image: 'https://images.unsplash.com/photo-1635172553259-d25850600476?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        description: 'A guide to the most prestigious art galleries in Dubai.',
+        url: '/fine-art/exclusive-art-galleries'
+      },
+      {
+        title: 'Collecting Middle Eastern Art: A Beginner\'s Guide',
+        image: 'https://images.unsplash.com/photo-1492037766660-2a56f9eb3fcb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        description: 'Tips for starting your Middle Eastern art collection.',
+        url: '/fine-art/collecting-middle-eastern-art'
+      },
+      {
+        title: 'Art Dubai: A Global Art Fair',
+        image: 'https://galeriemagazine.com/wp-content/uploads/2019/03/4.-Samia-Halaby-represented-by-Ayyam-Gallery-Art-Dubai-Contemporary-Art-Dubai-2019-Courtesy-of-Photo-Solutions-1920x1200.jpg',
+        description: 'Discover the international art fair that puts Dubai on the global art map.',
+        url: '/fine-art/art-dubai-fair'
+      },
+       {
+        title: 'Downtown Dubai: Boulevard Art',
+        image: 'https://lh3.googleusercontent.com/p/AF1QipOtrweHo716aPhLpGh4hLiRLzCBCS650DtkGOUj=s1360-w1360-h1020',
+        description: 'Discover the international art fair that puts Dubai on the global art map.',
+        url: '/fine-art/art-dubai-fair'
+      },
+      {
+        title: 'Emerging Emirati Artists to Watch',
+        image: 'https://media.admiddleeast.com/photos/66a78e494a619d1cfee515e5/master/w_1600,c_limit/Mohammed%20Kazem%20by%20Joseph%20Rahul.jpg',
+        description: 'Spotlight on up-and-coming local artists shaping Dubai\'s art scene.',
+        url: '/fine-art/emerging-emirati-artists'
+      }
+    ]
+  },
+  {
+    title: 'Dining',
+    articles: [
+      {
+        title: 'Dubai\'s Michelin-Starred Restaurants',
+        image: 'https://images.unsplash.com/photo-1600028035145-19e30d5e7595?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        description: 'A culinary journey through Dubai\'s finest dining establishments.',
+        url: '/dining/michelin-starred-restaurants'
+      },
+      {
+        title: 'Hidden Gems: Dubai\'s Best Local Eateries',
+        image: '/images/local-eateries-dubai.jpg',
+        description: 'Discover authentic Emirati cuisine off the beaten path.',
+        url: '/dining/local-eateries'
+      },
+      {
+        title: 'The Art of Arabic Coffee',
+        image: '/images/arabic-coffee.jpg',
+        description: 'Delve into the rich tradition of Arabic coffee in Dubai.',
+        url: '/dining/art-of-arabic-coffee'
+      },
+      {
+        title: 'Dubai\'s Most Instagrammable Restaurants',
+        image: '/images/instagrammable-restaurants.jpg',
+        description: 'Dine in style at these visually stunning eateries.',
+        url: '/dining/instagrammable-restaurants'
+      },
+      {
+        title: 'Luxury Dining with a View: Dubai\'s Rooftop Restaurants',
+        image: '/images/rooftop-restaurants.jpg',
+        description: 'Experience fine dining with breathtaking skyline views.',
+        url: '/dining/rooftop-restaurants'
+      }
+    ]
+  },
+  {
+    title: 'Properties',
+    articles: [
+      {
+        title: 'Dubai\'s Most Luxurious Penthouses',
+        image: '/images/dubai-penthouses.jpg',
+        description: 'Tour the most opulent penthouses in Dubai\'s skyline.',
+        url: '/properties/luxurious-penthouses'
+      },
+      {
+        title: 'Investing in Dubai Real Estate: A Guide',
+        image: '/images/dubai-real-estate.jpg',
+        description: 'Expert advice on investing in Dubai\'s property market.',
+        url: '/properties/investing-guide'
+      },
+      {
+        title: 'Sustainable Luxury: Dubai\'s Eco-Friendly Residences',
+        image: '/images/eco-friendly-residences.jpg',
+        description: 'Discover Dubai\'s most sustainable luxury properties.',
+        url: '/properties/eco-friendly-residences'
+      },
+      {
+        title: 'Palm Jumeirah: Living on Dubai\'s Iconic Palm-Shaped Island',
+        image: '/images/palm-jumeirah.jpg',
+        description: 'Explore the exclusive properties on this man-made wonder.',
+        url: '/properties/palm-jumeirah-living'
+      },
+      {
+        title: 'Dubai\'s Futuristic Homes: Smart Technology in Luxury Living',
+        image: '/images/smart-homes-dubai.jpg',
+        description: 'How cutting-edge tech is shaping Dubai\'s luxury residences.',
+        url: '/properties/futuristic-smart-homes'
+      }
+    ]
+  },
+  {
+    title: 'Lifestyle',
+    articles: [
+      {
+        title: 'Dubai\'s Most Exclusive Spas',
+        image: '/images/dubai-spas.jpg',
+        description: 'Indulge in Dubai\'s most luxurious spa experiences.',
+        url: '/lifestyle/exclusive-spas'
+      },
+      {
+        title: 'Fashion Week Dubai: What to Expect',
+        image: '/images/fashion-week-dubai.jpg',
+        description: 'A preview of the upcoming Dubai Fashion Week.',
+        url: '/lifestyle/fashion-week'
+      },
+      {
+        title: 'Dubai\'s Luxury Fitness Scene',
+        image: '/images/dubai-fitness.jpg',
+        description: 'Explore high-end gyms and wellness centers in Dubai.',
+        url: '/lifestyle/luxury-fitness'
+      },
+      {
+        title: 'The Ultimate Guide to Dubai\'s Luxury Malls',
+        image: '/images/dubai-luxury-malls.jpg',
+        description: 'Shop till you drop in Dubai\'s most extravagant shopping centers.',
+        url: '/lifestyle/luxury-malls-guide'
+      },
+      {
+        title: 'Dubai\'s VIP Nightlife: Exclusive Clubs and Lounges',
+        image: '/images/dubai-nightlife.jpg',
+        description: 'Experience the city\'s after-dark playground for the elite.',
+        url: '/lifestyle/vip-nightlife'
+      }
+    ]
+  },
+  {
+    title: 'Yachts',
+    articles: [
+      {
+        title: 'Dubai\'s Most Luxurious Yachts for Charter',
+        image: '/images/luxury-yachts-dubai.jpg',
+        description: 'Experience Dubai\'s coastline on these opulent vessels.',
+        url: '/yachts/luxury-charters'
+      },
+      {
+        title: 'Dubai International Boat Show: What to Expect',
+        image: '/images/boat-show-dubai.jpg',
+        description: 'A preview of the upcoming Dubai International Boat Show.',
+        url: '/yachts/boat-show'
+      },
+      {
+        title: 'Yacht Ownership in Dubai: A Comprehensive Guide',
+        image: '/images/yacht-ownership-dubai.jpg',
+        description: 'Everything you need to know about owning a yacht in Dubai.',
+        url: '/yachts/ownership-guide'
+      },
+      {
+        title: 'Dubai\'s Most Scenic Yacht Routes',
+        image: '/images/yacht-routes-dubai.jpg',
+        description: 'Discover the best sailing experiences along Dubai\'s coast.',
+        url: '/yachts/scenic-routes'
+      },
+      {
+        title: 'Luxury Yacht Parties: Dubai\'s Ultimate VIP Experience',
+        image: '/images/yacht-parties-dubai.jpg',
+        description: 'How to throw an unforgettable party on a luxury yacht in Dubai.',
+        url: '/yachts/luxury-parties'
+      }
+    ]
+  },
+  {
+    title: 'Private Jets',
+    articles: [
+      {
+        title: 'Dubai\'s Top Private Jet Charters',
+        image: '/images/private-jet-charters.jpg',
+        description: 'Explore the most luxurious private jet services in Dubai.',
+        url: '/private-jets/top-charters'
+      },
+      {
+        title: 'The Future of Private Aviation in Dubai',
+        image: '/images/future-private-aviation.jpg',
+        description: 'Insights into upcoming trends in Dubai\'s private aviation sector.',
+        url: '/private-jets/future-trends'
+      },
+      {
+        title: 'VIP Airport Services in Dubai',
+        image: '/images/vip-airport-services.jpg',
+        description: 'Experience first-class treatment at Dubai\'s airports.',
+        url: '/private-jets/vip-airport-services'
+      },
+      {
+        title: 'Dubai to the World: Luxury Long-Haul Private Flights',
+        image: '/images/long-haul-private-jets.jpg',
+        description: 'How Dubai connects to global destinations via private aviation.',
+        url: '/private-jets/long-haul-flights'
+      },
+      {
+        title: 'Inside Dubai\'s Most Luxurious Private Jet Interiors',
+        image: '/images/luxury-jet-interiors.jpg',
+        description: 'A peek into the opulent cabins of Dubai\'s high-end private jets.',
+        url: '/private-jets/luxury-interiors'
+      }
+    ]
+  },
+  {
+    title: 'Luxury Cars',
+    articles: [
+      {
+        title: 'Dubai\'s Most Exclusive Car Showrooms',
+        image: '/images/luxury-car-showrooms.jpg',
+        description: 'Tour the city\'s top dealerships for premium and supercar brands.',
+        url: '/luxury-cars/exclusive-showrooms'
+      },
+      {
+        title: 'Supercar Rental in Dubai: Drive Your Dream Car',
+        image: '/images/supercar-rental.jpg',
+        description: 'How to get behind the wheel of the world\'s most coveted vehicles.',
+        url: '/luxury-cars/supercar-rental'
+      },
+      {
+        title: 'Dubai Autodrome: A Paradise for Car Enthusiasts',
+        image: '/images/dubai-autodrome.jpg',
+        description: 'Experience high-speed thrills at Dubai\'s premier racing circuit.',
+        url: '/luxury-cars/dubai-autodrome'
+      },
+      {
+        title: 'Customizing Luxury Cars in Dubai',
+        image: '/images/car-customization.jpg',
+        description: 'Discover the art of personalizing high-end vehicles in the city.',
+        url: '/luxury-cars/customization'
+      },
+      {
+        title: 'Classic Car Collections in Dubai',
+        image: '/images/classic-cars-dubai.jpg',
+        description: 'Explore vintage automobile treasures in the heart of the city.',
+        url: '/luxury-cars/classic-collections'
+      }
+    ]
+  },
+  {
+    title: 'Watches & Jewelry',
+    articles: [
+      {
+        title: 'Dubai\'s Most Exclusive Watch Boutiques',
+        image: '/images/watch-boutiques.jpg',
+        description: 'Discover where to find the world\'s finest timepieces in Dubai.',
+        url: '/watches-jewelry/exclusive-watch-boutiques'
+      },
+      {
+        title: 'The Art of Arabic Jewelry Design',
+        image: '/images/arabic-jewelry.jpg',
+        description: 'Explore the intricate craftsmanship of traditional and modern Arabic jewelry.',
+        url: '/watches-jewelry/arabic-jewelry-design'
+      },
+      {
+        title: 'Dubai Watch Week: A Horologist\'s Paradise',
+        image: '/images/dubai-watch-week.jpg',
+        description: 'What to expect at this prestigious event for watch enthusiasts.',
+        url: '/watches-jewelry/dubai-watch-week'
+      },
+      {
+        title: 'Investment Watches: Timepieces as Assets',
+        image: '/images/investment-watches.jpg',
+        description: 'Guide to collecting and investing in high-value watches in Dubai.',
+        url: '/watches-jewelry/investment-timepieces'
+      },
+      {
+        title: 'Bespoke Jewelry in Dubai: Creating Your Perfect Piece',
+        image: '/images/bespoke-jewelry.jpg',
+        description: 'How to commission custom-made jewelry from Dubai\'s top designers.',
+        url: '/watches-jewelry/bespoke-jewelry'
+      }
+    ]
+  },
+  {
+    title: 'Wellness & Spa',
+    articles: [
+      {
+        title: 'Dubai\'s Most Luxurious Spa Retreats',
+        image: '/images/luxury-spa-retreats.jpg',
+        description: 'Indulge in the ultimate relaxation at these top-tier spa destinations.',
+        url: '/wellness-spa/luxury-retreats'
+      },
+      {
+        title: 'Traditional Arabic Hammam Experience',
+        image: '/images/arabic-hammam.jpg',
+        description: 'Discover the rejuvenating rituals of authentic Arabic bathhouses.',
+        url: '/wellness-spa/arabic-hammam'
+      },
+      {
+        title: 'Holistic Wellness Centers in Dubai',
+        image: '/images/holistic-wellness.jpg',
+        description: 'Explore integrative approaches to health and well-being in the city.',
+        url: '/wellness-spa/holistic-centers'
+      },
+      {
+        title: 'Luxury Fitness Retreats: Transformative Experiences',
+        image: '/images/fitness-retreats.jpg',
+        description: 'Combine wellness and fitness in Dubai\'s exclusive health programs.',
+        url: '/wellness-spa/fitness-retreats'
+      },
+      {
+        title: 'Dubai\'s Most Innovative Beauty Treatments',
+        image: '/images/innovative-beauty.jpg',
+        description: 'Cutting-edge cosmetic procedures and therapies available in Dubai.',
+        url: '/wellness-spa/innovative-beauty-treatments'
+      }
+    ]
+  }
+];
+---
+
+<div class="tabbed-sections mt-16">
+  <h2 class="text-3xl md:text-4xl font-serif mb-8 text-center">Explore Dubai's Luxury</h2>
+  
+  <div class="tab-navigation mb-8 flex flex-wrap justify-center">
+    {sections.map((section, index) => (
+      <button
+        class={`tab-button px-4 py-2 mx-2 my-1 rounded-full transition-colors duration-200 ${index === 0 ? 'bg-dubise-green text-white' : 'bg-gray-200 text-dubise-black hover:bg-dubise-green hover:text-white'}`}
+        data-tab={index}
+      >
+        {section.title}
+      </button>
+    ))}
+  </div>
+
+  <div class="tab-content">
+    {sections.map((section, index) => (
+      <div class={`tab-pane ${index === 0 ? 'active' : 'hidden'}`} data-tab={index}>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {section.articles.map((article) => (
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+              <img src={article.image} alt={article.title} class="w-full h-48 object-cover" />
+              <div class="p-6">
+                <h3 class="text-xl font-serif mb-2">{article.title}</h3>
+                <p class="text-gray-600 mb-4">{article.description}</p>
+                <a href={article.url} class="inline-block bg-dubise-green text-white py-2 px-4 rounded hover:bg-opacity-80 transition-colors duration-200">
+                  Read More
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+<script>
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabPanes = document.querySelectorAll('.tab-pane');
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const tabIndex = button.getAttribute('data-tab');
+      
+      tabButtons.forEach(btn => btn.classList.remove('bg-dubise-green', 'text-white'));
+      tabPanes.forEach(pane => pane.classList.add('hidden'));
+      
+      button.classList.add('bg-dubise-green', 'text-white');
+      document.querySelector(`.tab-pane[data-tab="${tabIndex}"]`).classList.remove('hidden');
+    });
+  });
+</script>
