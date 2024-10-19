@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getPage } from '../strapiService';
+
+export async function getStaticPaths() {
+  // This function is needed for static site generation
+  // You'll need to implement a getAllPages function in strapiService.js
+  const pages = await getAllPages();
+  return pages.map(page => ({
+    params: { slug: page.attributes.urlslug },
+    props: { page },
+  }));
+}
+
+const { slug } = Astro.params;
+const page = await getPage(slug);
+console.log('Fetched page:', page); // For debugging
+---
+
+<Layout title={page?.attributes?.title || 'Page Not Found'}>
+  {page ? (
+    <>
+      <h1>{page.attributes.title}</h1>
+      <h2>{page.attributes.heading}</h2>
+      <div set:html={page.attributes.paragraph}></div>
+    </>
+  ) : (
+    <p>Page not found</p>
+  )}
+</Layout>
